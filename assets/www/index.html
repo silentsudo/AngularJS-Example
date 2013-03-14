@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='website'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/angular.js"></script>
+<!-- <script type="text/javascript" src="js/website.js" ></script> -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/service.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+<title>Hello World</title>
+</head>
+<body ng-controller="MainCtrl">
+	<h1>Static Part</h1>
+	<h4>Dynamic Part</h4>
+	<h1>Good Pattern Folowed</h1>
+	<p>{{name}}</p>
+	<p>{{about}}</p>
+	<p>{{experiment}}</p>
+	<p>{{home}}</p>
+	<!-- this also works <a href="#about">About</a> | <a href="#experiment">Experiment</a> | <a href="#home">Home</a> -->
+	<a ng-click="setRoute('about')" href="#about">About</a> |
+	<a ng-click="setRoute('experiment')" href="#experiment">Experiment</a>
+	|
+	<a ng-click="setRoute('home')" href="#home">Home</a>
+	<div id="container">
+		<div ng-view></div>
+	</div>
+</body>
+</html>
